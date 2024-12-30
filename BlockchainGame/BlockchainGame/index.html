@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Game</title>
+    <style>
+        /* Add background image */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            background-image: url('/dragon.jpg');  /* Path to image in the public folder */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;  /* Ensure the background covers the full viewport */
+        }
+
+        .input-field {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .card-details, .battle-result, .trade-result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: inline-block;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blockchain Game</h1>
+
+    <!-- Mint a Card -->
+    <h3>Mint a New Card</h3>
+    <input id="mintTo" class="input-field" type="text" placeholder="Owner Address" />
+    <input id="cardName" class="input-field" type="text" placeholder="Card Name" />
+    <input id="attackPoints" class="input-field" type="number" placeholder="Attack Points" />
+    <input id="defensePoints" class="input-field" type="number" placeholder="Defense Points" />
+    <button class="button" onclick="mintCard()">Mint Card</button>
+
+    <!-- Fetch Cards -->
+    <h3>Fetch Cards by Owner</h3>
+    <input id="ownerAddress" class="input-field" type="text" placeholder="Owner Address" />
+    <button class="button" onclick="fetchCards()">Fetch Cards</button>
+    <div id="cardsList" class="card-details" style="display:none;"></div>
+
+    <!-- Battle Cards -->
+    <h3>Battle Cards</h3>
+    <input id="card1" class="input-field" type="number" placeholder="Token ID 1" />
+    <input id="card2" class="input-field" type="number" placeholder="Token ID 2" />
+    <button class="button" onclick="battleCards()">Battle</button>
+    <div id="battleResult" class="battle-result" style="display:none;"></div>
+
+    <!-- Trade Cards -->
+    <h3>Trade a Card</h3>
+    <input id="tradeTokenId" class="input-field" type="number" placeholder="Token ID" />
+    <input id="tradeTo" class="input-field" type="text" placeholder="New Owner Address" />
+    <button class="button" onclick="tradeCard()">Trade</button>
+    <div id="tradeResult" class="trade-result" style="display:none;"></div>
+
+ 
