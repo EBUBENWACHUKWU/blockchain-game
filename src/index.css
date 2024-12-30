@@ -1,0 +1,44 @@
+/* index.css */
+
+/* Normalize or reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa; /* Light background color */
+  color: #333; /* Default text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* The App class styles */
+.App {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 2rem;
+  min-height: 100vh;
+}
